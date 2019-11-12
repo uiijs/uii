@@ -1,0 +1,71 @@
+@import '../../style/variables.scss';
+
+$prefix: "uii-btn";
+
+//  Button variants
+@mixin button-variant($color, $bg) {
+	color: $color;
+	background-color: $bg;
+	&:hover {
+		background-color: darken($bg, 10%);
+	}
+	&:focus, &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px fadeout($bg, 74%);
+	}
+	&:active, &.active {
+    color: $color;
+    background-color: darken($bg, 20%);
+    background-image: none;
+  }
+  &.disabled, &[disabled] {
+    background-color: lighten($bg, 20%);
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+	padding: $padding-y $padding-x;
+	font-size: $font-size;
+	border-radius: $border-radius;
+}
+
+.#{$prefix} {
+	display: inline-block;
+	user-select: none;
+	text-align: center;
+	cursor: pointer;
+	@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $border-radius);
+	border: none;
+	> *:not(:last-child) {
+    margin-right: $btn-space;
+	}
+	& + &:not(.block) {
+    margin-left: $btn-space;
+  }
+	&.block {
+		display: block;
+		width: 100%;
+	}
+	&.disabled, &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+@each $text, $bg, $color in $theme-colors {
+  .#{$prefix}-#{$text} {
+    @include button-variant($color, $bg);
+  }
+}
+
+.#{$prefix}-link {
+	@include button-variant($black, transparent);
+}
+
+.#{$prefix}-sm{
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $border-radius-sm);
+}
+
+.#{$prefix}-lg{
+	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $border-radius-lg);
+}

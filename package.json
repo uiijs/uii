@@ -1,0 +1,45 @@
+{
+  "name": "uii",
+  "version": "0.0.1",
+  "description": "A design system with React 16+.",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uiijs/uii.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "wangkailang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uiijs/uii/issues"
+  },
+  "homepage": "https://github.com/uiijs/uii#readme",
+  "peerDependencies": {
+    "react": ">=16.7.0",
+    "react-dom": ">=16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "classnames": "^2.2.6",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "react-dom": "^16.11.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {}
+}
