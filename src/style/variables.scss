@@ -9,13 +9,14 @@ $yellow :#ffc61d !default;
 $green: #3bad55 !default;
 $cyan: #1594a8 !default;
 
-$primary:       $blue !default;
-$secondary:     $gray !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+$primary: $blue !default;
+$secondary: $gray !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
 
+// Btn text, color, background
 $theme-colors: (
   "primary" $primary $white,
   "secondary" $secondary $white,
@@ -28,9 +29,9 @@ $theme-colors: (
 
 $space: 8px !default;
 
-$border-radius-sm:            .2rem !default;
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
+$border-radius-sm: .2rem !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
 
 // Font Size
 $font-size-sm: .875rem !default; // 14px
